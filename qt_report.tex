@@ -1,0 +1,37 @@
+\documentclass[a4paper,11pt]{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{beaver}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{amsmath,amssymb}
+\numberwithin{equation}{section}
+\usepackage{graphicx}
+\graphicspath{{images/}} % cartella immagini
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\pgfplotsset{compat=1.18}
+
+
+% metadati
+\title{Quantum Transport}
+\author{Mirco Tollardo, Jacopo Goldoni, Simone Casalino}
+\date{a.y 2025-2026}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Computing the transmission coefficient}
+\input{sections/tran_coeff.tex}
+
+
+\end{document}
