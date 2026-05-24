@@ -73,8 +73,12 @@ figure(1)
 plot(Evet/eV, T, Evet/eV, T_classic, 'LineWidth', 2);
 xlabel('Energy (eV)')
 ylabel('Transmission coefficient')
+legend('Quantum Transmission', 'Classical Transmission', 'Location', 'Best')
+
+[Uplot,Lplot] = f_Geom2Plot(U,L);
 
 figure(2)
-plot(L/nm, U/eV, 'LineWidth', 2);
-xlabel('Position (nm)')
-ylabel('Potential (eV)')
+plot(Lplot/nm, Uplot/eV, 'LineWidth', 2);
+xlabel('Position z (nm)')
+ylabel('Energy (eV)')
+ylim([min(Uplot/eV-0.05), max(Uplot/eV+0.05)])

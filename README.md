@@ -1,6 +1,4 @@
-## CLAUDE.md
-
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+## README.md
 
 ## Project overview
 
@@ -13,7 +11,7 @@ The two halves are decoupled: MATLAB scripts produce figures, the report include
 
 ## Building the report
 
-```powershell
+```
 pdflatex qt_report.tex
 pdflatex qt_report.tex    # second pass for \tableofcontents
 ```

@@ -1,6 +1,6 @@
-% c = parcluster('local');
-% c.NumWorkers = 6;
-% parpool(c, c.NumWorkers)
+c = parcluster('local');
+c.NumWorkers = 6;
+parpool(c, c.NumWorkers)
 % 
 % delete(gcp);
 
@@ -34,7 +34,7 @@ hbar = h/(2*pi);                  % reduced Planck constant (J*s)
 Temp  = 300;                      % temperature (K)
 meffn = 0.067*m0;                 % effective mass (kg)
 Ubarr = 0.25*eV;                  % barrier potential (J)
-twell = 3*nm;                     % well thickness (m)
+twell = 3.5*nm;                     % well thickness (m)
 tbarr = 2.5*nm;                   % barrier thickness (m)
 nbarr = 20;                        % number of barriers in the geometry
 
@@ -76,6 +76,7 @@ for indE = 1:length(Evet)
     f0 = 1./(1+exp((E-0)./(kB*Temp)));
 
     eSpectralDensity(indE,:) = LDOS0(indE,:).*f0;
+    eSpectralDensity(isnan(eSpectralDensity)) = 0;
 end
 
 eDensity0 = 1/(2*pi)*trapz(Evet, eSpectralDensity);
@@ -84,7 +85,7 @@ eDensity_rec_mean = mean(1./eDensity0(5:97));
 
 for indV = 1:length(Vvet)
     T = zeros(length(Evet),1);
-    SpectralJ = zeros(1, length(Evet))
+    SpectralJ = zeros(1, length(Evet));
     
     V = Vvet(indV);
 
@@ -126,3 +127,4 @@ set(gca, 'FontName', 'Times New Roman', 'FontSize', 14)
 % Landau-Büttiker formula required for the exam
 % this curve starts from zero because at zero field the current is zero since the difference of the Fermi functions (Fermi window) is zero (see Landau-Büttiker formula)
 % current is zero at high fields because the transmission coefficient goes to zero. By applying an electric field the slope of the potential increases, and the transmission coefficient decreases. 
+delete(gcp);
