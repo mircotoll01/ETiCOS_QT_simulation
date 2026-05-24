@@ -70,4 +70,11 @@ end
 
 
 figure(1)
-plot(Evet/eV, T, Evet/eV, T_classic, 'LineWidth', 2)
+plot(Evet/eV, T, Evet/eV, T_classic, 'LineWidth', 2);
+xlabel('Energy (eV)')
+ylabel('Transmission coefficient')
+
+figure(2)
+plot(L/nm, U/eV, 'LineWidth', 2);
+xlabel('Position (nm)')
+ylabel('Potential (eV)')
