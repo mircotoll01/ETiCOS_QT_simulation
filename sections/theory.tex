@@ -1,0 +1,29 @@
+\begin{frame}
+    \frametitle{The 1D stationary Schr\"odinger equation}
+    \begin{equation*}
+        \left[-\frac{\hbar^{2}}{2m_{e}}\frac{\partial^{2}}{\partial z^{2}} + U(z)\right]\psi(z) = E\,\psi(z)
+    \end{equation*}
+    \begin{itemize}
+        \item $U(z)$ is piecewise-constant (alternating well and barrier layers); $m_{e}$ is the effective mass under the parabolic-band approximation.
+        \item In each layer the solution is a superposition of progressive and regressive plane waves $A\,e^{+ik_{z}z} + B\,e^{-ik_{z}z}$ with $k_{z} = \sqrt{2m_{e}(E-U)/\hbar^{2}}$.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Quantum mechanics $\leftrightarrow$ transmission-line analogy}
+    \begin{center}
+        \renewcommand{\arraystretch}{1.35}
+        \begin{tabular}{l|l}
+            \textbf{Quantum mechanics} & \textbf{Transmission line} \\
+            \hline
+            Wavefunction $\psi(z)$ & Voltage $V(z)$ \\
+            Probability current $J(z)$ & Active power $\tfrac{1}{2}\,\mathrm{Re}\{V I^{*}\}$ \\
+            $\sqrt{2m_{e}(E-U)/\hbar^{2}}$ & Wavenumber $k_{z}$ \\
+            $\sqrt{8(E-U)/m_{e}}$ & Characteristic admittance $Y_{\infty}$ \\
+        \end{tabular}
+    \end{center}
+    \vspace{0.4em}
+    \begin{itemize}
+        \item Transmittance, LDOS and bound states are obtained from the local reflection coefficients $\overleftarrow{\Gamma}(z),\;\overrightarrow{\Gamma}(z)$ rather than from transfer matrices.
+    \end{itemize}
+\end{frame}
