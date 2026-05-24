@@ -57,7 +57,7 @@ L = [L, twell];
 Ueq = U;
 Leq = L;
 
-V = 0.1;
+V = 0.025;
 
 [U, L] = f_ApplyField(Ueq, Leq, V, NzSC);
 for indE = 1:length(Evet)

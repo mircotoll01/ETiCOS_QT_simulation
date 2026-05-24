@@ -27,7 +27,7 @@ hbar = h/(2*pi);                  % reduced Planck constant (J*s)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Temp  = 300;                      % temperature (K)
 meffn = 0.067*m0;                 % effective mass (kg)
-Ubarr = 0.25*eV;                  % barrier potential (J)
+Ubarr = 0.75*eV;                  % barrier potential (J)
 twell = 3*nm;                     % well thickness (m)
 tbarr = 2.5*nm;                   % barrier thickness (m)
 nbarr = 1;                        % number of barriers in the geometry
@@ -38,7 +38,7 @@ nbarr = 1;                        % number of barriers in the geometry
 NzPlot = 101;                     % number of plot points for the LDOS (if plotted)
 NzSC   = 1001;                    % points for the staircase approximation (if used)
 Vvet   = [0:0.05:0.3];            % vector of applied voltages (if used) (V)
-Evet   = [0.0001:1e-3:1.2]*eV;    % energy vector under study (J)
+Evet   = [0.0001:1e-3:4]*eV;    % energy vector under study (J)
 %Evet   = 0.14*eV;                % energy vector under study (J)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
